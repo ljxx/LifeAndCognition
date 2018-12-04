@@ -24,7 +24,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-
     //公共插件
     api project(':ylxcommonlib')
+
+    //模块组件
+    if (!isBuildModule) {
+        api project(':tool')
+    }
 }
