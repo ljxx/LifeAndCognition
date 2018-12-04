@@ -1,4 +1,4 @@
-package com.ylixiang.www.tool.app;
+package com.ylixiang.tool.app;
 
 import android.app.Application;
 

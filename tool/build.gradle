@@ -6,6 +6,7 @@ if (isBuildModule) {
 }
 
 def config = rootProject.ext.android
+def librarys = rootProject.ext.dependencies
 
 android {
     compileSdkVersion config.compileSdkVersion
@@ -48,5 +49,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //公共插件
     api project(':ylxcommonlib')
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    testImplementation librarys.junit
+    androidTestImplementation librarys.runner
+    androidTestImplementation librarys.espresso
 }

@@ -1,4 +1,4 @@
-package com.ylixiang.www.ylxcommonlib;
+package com.ylixiang.ylxcommonlib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ylixiang.www.ylxcommonlib.test", appContext.getPackageName());
+        assertEquals("com.ylixiang.ylxcommonlib.test", appContext.getPackageName());
     }
 }
