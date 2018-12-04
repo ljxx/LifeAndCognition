@@ -1,1 +1,1 @@
-include ':app', ':ylxcommonlib', ':tool'
+include ':app', ':ylxcommonlib', ':tool', ':life', ':user', ':market', ':entertainment'

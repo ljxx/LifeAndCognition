@@ -12,7 +12,9 @@ android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
     defaultConfig {
-        applicationId config.applicationId
+        if(isBuildModule) {
+            applicationId "com.ylixiang.tool"
+        }
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode

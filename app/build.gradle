@@ -27,13 +27,15 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //公共插件
     api project(':ylxcommonlib')
-
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
-
     //模块组件
     if (!isBuildModule) {
-        api project(':tool')
+        api project(':life') //生活模块
+        api project(':market') //集市模块
+        api project(':tool') //工具模块
+        api project(':entertainment') //娱乐模块
+        api project(':user') //用户模块
     }
 }

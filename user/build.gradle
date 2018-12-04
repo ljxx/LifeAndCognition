@@ -1,0 +1,58 @@
+def isBuildModule = rootProject.ext.isBuildModule
+if (isBuildModule) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+def config = rootProject.ext.android
+def librarys = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        if(isBuildModule) {
+            applicationId "com.ylixiang.user"
+        }
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (isBuildModule) {
+                manifest.srcFile 'src/main/usermodule/AndroidManifest.xml'
+//                java.srcDirs = ['src/main/java', 'src/main/module/java']
+//                res.srcDirs = ['src/main/res', 'src/main/module/res']
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+//            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //公共插件
+    api project(':ylxcommonlib')
+
+    testImplementation librarys.junit
+    androidTestImplementation librarys.runner
+    androidTestImplementation librarys.espresso
+}
