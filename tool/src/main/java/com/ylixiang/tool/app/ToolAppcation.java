@@ -1,22 +1,21 @@
 package com.ylixiang.tool.app;
 
 import android.app.Application;
-
 /**
  * ========================================
- * <p/>
- * 版 权：蓝吉星讯 版权所有 （C） 2017
- * <p/>
- * 作 者：yanglixiang
- * <p/>
- * 版 本：1.0
- * <p/>
- * 创建日期：2018/12/4  下午3:49
- * <p/>
+ * 
+ * 版 权：仅供学习使用
+ * 
+ * 作 者：杨理想
+ * 
+ * 微 信：lanjixingxun
+ * 
+ * Q  Q：1099740455
+ * 
+ * 创建日期：2018/12/4 下午6:16
+ * 
  * 描 述：
- * <p/>
- * 修订历史：
- * <p/>
+ * 
  * ========================================
  */
 public class ToolAppcation extends Application {
