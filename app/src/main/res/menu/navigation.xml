@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m_main_life_tab"
+        android:icon="@drawable/ic_main_life_tab_unchecked"
+        android:title="@string/m_main_tab_life_txt"/>
+
+    <item
+        android:id="@+id/m_main_market_tab"
+        android:icon="@drawable/ic_main_market_tab_unchecked"
+        android:title="@string/m_main_tab_market_txt"/>
+
+    <item
+        android:id="@+id/m_main_tool_tab"
+        android:icon="@drawable/ic_main_tool_tab_unchecked"
+        android:title="@string/m_main_tab_tool_txt"/>
+
+    <item
+        android:id="@+id/m_main_entertainment_tab"
+        android:icon="@drawable/ic_main_generated_tab_unchecked"
+        android:title="@string/m_main_tab_entertainment_txt"/>
+
+    <item
+        android:id="@+id/m_main_user_tab"
+        android:icon="@drawable/ic_main_user_tab_unchecked"
+        android:title="@string/m_main_tab_user_txt"/>
+
+</menu>

@@ -28,7 +28,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api librarys.appcompatV7
     api librarys.constraint
+    api librarys.design
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
+
 }

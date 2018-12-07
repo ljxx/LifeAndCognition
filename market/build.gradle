@@ -12,7 +12,7 @@ android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
     defaultConfig {
-        if(isBuildModule){
+        if (isBuildModule) {
             applicationId "com.ylixiang.market"
         }
         minSdkVersion config.minSdkVersion
@@ -52,6 +52,7 @@ dependencies {
     //公共插件
     api project(':ylxcommonlib')
 
+    implementation 'com.android.support:support-v4:28.0.0'
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso

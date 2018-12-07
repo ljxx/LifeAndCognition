@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
 
 def config = rootProject.ext.android
 def isBuildModule = rootProject.ext.isBuildModule
@@ -21,6 +22,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -30,6 +37,15 @@ dependencies {
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
+
+    //第三方库
+    api librarys.butterknife
+    annotationProcessor librarys.butterknifeCompiler
+
+    //第三方库
+//    implementation 'com.jakewharton:butterknife:9.0.0-rc2'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
+
     //模块组件
     if (!isBuildModule) {
         api project(':life') //生活模块

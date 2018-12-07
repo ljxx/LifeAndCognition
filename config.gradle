@@ -10,6 +10,7 @@ ext {
             //版本号
             versionCode         : 1,
             versionName         : '1.0',
+
     ]
 
     libsVersion = [
@@ -17,14 +18,21 @@ ext {
             constraintVersion = "1.1.3",
             junitVersion = "4.12",
             runnerVersion = "1.0.2",
-            espressoVersion = "3.0.2"
+            espressoVersion = "3.0.2",
+
+            //第三方
+            butterknifeVersion = '9.0.0-rc2'
     ]
 
     dependencies = [
             appcompatV7         : "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
             constraint          : "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion",
+            design              : "com.android.support:design:$rootProject.supportLibraryVersion",
             junit               : "junit:junit:$rootProject.junitVersion",
             runner              : "com.android.support.test:runner:$rootProject.runnerVersion",
-            espresso            : "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+            espresso            : "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion",
+
+            butterknife         : "com.jakewharton:butterknife:$rootProject.butterknifeVersion",
+            butterknifeCompiler : "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
     ]
 }
