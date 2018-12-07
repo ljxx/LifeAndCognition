@@ -19,6 +19,8 @@
         android:layout_height="50dp"
         android:background="@color/main_white_color"
         app:itemBackground="@null"
+        app:labelVisibilityMode="labeled"
+        app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@drawable/bottom_navigation_selector"
         app:itemTextColor="@drawable/bottom_navigation_selector"
         app:menu="@menu/navigation"/>

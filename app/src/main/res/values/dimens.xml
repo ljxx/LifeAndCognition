@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置BottomNavigationView文字大小开始-->
+    <!-- icon与text间隔大小 -->
+    <!--<dimen name="design_bottom_navigation_margin">0dp</dimen>-->
+    <!-- 导航栏高度 -->
+    <!--<dimen name="design_bottom_navigation_height">50dp</dimen>-->
+    <!-- text大小 -->
+    <dimen name="design_bottom_navigation_text_size">11sp</dimen>
+    <!-- text大小 -->
+    <dimen name="design_bottom_navigation_active_text_size">11sp</dimen>
+    <!--设置BottomNavigationView文字大小结束-->
+</resources>

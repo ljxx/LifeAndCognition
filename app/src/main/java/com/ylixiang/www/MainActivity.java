@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mBottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemReselectedListener);
+//        BottomNavigationViewHelper.disableShifMode(mBottomNavigationView);
 
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mMainViewPager.setAdapter(mViewPagerAdapter);
