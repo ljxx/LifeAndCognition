@@ -32,23 +32,26 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     api librarys.appcompatV7
     api librarys.constraint
     api librarys.design
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
-
     //第三方库
     api librarys.butterknife
     annotationProcessor librarys.butterknifeCompiler
-
     //解决冲突
     api(librarys.arouterApi) {
         exclude module: 'support-v4'
     }
     annotationProcessor librarys.arouterCompiler
-
-
+    api librarys.rxjava2
+    api librarys.rxandroid2
+    api librarys.retrofit2
+    api librarys.converterGson
+    api librarys.converterScalars
+    api librarys.adapterRxjava
+    api librarys.loggingInterceptor
 }

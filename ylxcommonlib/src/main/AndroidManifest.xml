@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ylixiang.ylxcommonlib" />
+    package="com.ylixiang.ylxcommonlib" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>
