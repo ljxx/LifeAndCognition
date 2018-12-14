@@ -1,6 +1,6 @@
 package com.ylixiang.market.app;
 
-import android.app.Application;
+import com.ylixiang.ylxcommonlib.BaseApplication;
 
 /**
  * ========================================
@@ -19,5 +19,5 @@ import android.app.Application;
  * 
  * ========================================
  */
-public class MarketAppcation extends Application {
+public class MarketAppcation extends BaseApplication {
 }

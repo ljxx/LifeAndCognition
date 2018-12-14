@@ -2,6 +2,9 @@ package com.ylixiang.life;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 /**
  * ========================================
  * 
@@ -19,6 +22,7 @@ import android.os.Bundle;
  * 
  * ========================================
  */
+@Route(path = "/life/LifeMainActivity")
 public class LifeMainActivity extends AppCompatActivity {
 
     @Override

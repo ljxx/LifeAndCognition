@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 
 def config = rootProject.ext.android
 def librarys = rootProject.ext.dependencies
@@ -14,11 +15,17 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -32,5 +39,16 @@ dependencies {
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
+
+    //第三方库
+    api librarys.butterknife
+    annotationProcessor librarys.butterknifeCompiler
+
+    //解决冲突
+    api(librarys.arouterApi) {
+        exclude module: 'support-v4'
+    }
+    annotationProcessor librarys.arouterCompiler
+
 
 }

@@ -1,6 +1,7 @@
 package com.ylixiang.tool.app;
 
-import android.app.Application;
+import com.ylixiang.ylxcommonlib.BaseApplication;
+
 /**
  * ========================================
  * 
@@ -18,5 +19,5 @@ import android.app.Application;
  * 
  * ========================================
  */
-public class ToolAppcation extends Application {
+public class ToolAppcation extends BaseApplication {
 }

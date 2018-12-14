@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ylixiang.market.R;
+import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@Route(path = ARouterUtils.MARKET_FRAGMENT_MAIN)
 public class MainMarketFragment extends Fragment {
 
 
@@ -25,10 +28,6 @@ public class MainMarketFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_market, container, false);
-    }
-
-    public static MainMarketFragment newInstance() {
-        return new MainMarketFragment();
     }
 
 }

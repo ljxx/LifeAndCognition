@@ -15,10 +15,16 @@ android {
         versionCode config.versionCode
         versionName config.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -42,9 +48,7 @@ dependencies {
     api librarys.butterknife
     annotationProcessor librarys.butterknifeCompiler
 
-    //第三方库
-//    implementation 'com.jakewharton:butterknife:9.0.0-rc2'
-//    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
+    annotationProcessor librarys.arouterCompiler
 
     //模块组件
     if (!isBuildModule) {

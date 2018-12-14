@@ -22,6 +22,12 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
     }
 
     buildTypes {
@@ -39,6 +45,10 @@ android {
 //                res.srcDirs = ['src/main/res', 'src/main/module/res']
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //全部Module一起编译的时候剔除debug目录
+                    exclude '**/usermodule/**'
+                }
             }
 //            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
         }
@@ -56,4 +66,6 @@ dependencies {
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
+
+    annotationProcessor librarys.arouterCompiler
 }

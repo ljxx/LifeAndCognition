@@ -1,7 +1,12 @@
 package com.ylixiang.market;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.ylixiang.ylxcommonlib.arouter.ConstantUtils;
+
 /**
  * ========================================
  * 
@@ -19,11 +24,17 @@ import android.os.Bundle;
  * 
  * ========================================
  */
+@Route(path = "/market/MarketMainActivity")
 public class MarketMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_market_main);
+
+        String mHello = getIntent().getStringExtra(ConstantUtils.MARKET_ACTIVITY_SEND_HELLO);
+
+        Toast.makeText(this, mHello, Toast.LENGTH_LONG).show();
+
     }
 }

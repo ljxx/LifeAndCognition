@@ -8,12 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.ylixiang.entertainment.mvp.MainEntertainmentFragment;
-import com.ylixiang.life.mvp.MainLifeFragment;
-import com.ylixiang.market.mvp.MainMarketFragment;
-import com.ylixiang.tool.mvp.MainToolFragment;
-import com.ylixiang.user.mvp.MainUserFragment;
 import com.ylixiang.www.bottomtab.ViewPagerAdapter;
+import com.ylixiang.www.utils.FragmentUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
         mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         mMainViewPager.setAdapter(mViewPagerAdapter);
         mFragmentList = new ArrayList<>();
-        mFragmentList.add(MainLifeFragment.newInstance());
-        mFragmentList.add(MainMarketFragment.newInstance());
-        mFragmentList.add(MainToolFragment.newInstance());
-        mFragmentList.add(MainEntertainmentFragment.newInstance());
-        mFragmentList.add(MainUserFragment.newInstance());
+        mFragmentList.add(FragmentUtils.getLifeFragment());
+        mFragmentList.add(FragmentUtils.getMarketFragment());
+        mFragmentList.add(FragmentUtils.getEntertainment());
+        mFragmentList.add(FragmentUtils.getToolFragment());
+        mFragmentList.add(FragmentUtils.getUserFragment());
         mViewPagerAdapter.setList(mFragmentList);
 
         initListener();

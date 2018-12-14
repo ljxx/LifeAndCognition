@@ -21,7 +21,9 @@ ext {
             espressoVersion = "3.0.2",
 
             //第三方
-            butterknifeVersion = '9.0.0-rc2'
+            butterknifeVersion = '9.0.0-rc2',
+            arouterApiVersion = '1.4.1',
+            arouterCompilerVersion = '1.2.2'
     ]
 
     dependencies = [
@@ -33,6 +35,8 @@ ext {
             espresso            : "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion",
 
             butterknife         : "com.jakewharton:butterknife:$rootProject.butterknifeVersion",
-            butterknifeCompiler : "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+            butterknifeCompiler : "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion",
+            arouterApi          : "com.alibaba:arouter-api:$rootProject.arouterApiVersion",
+            arouterCompiler     : "com.alibaba:arouter-compiler:$rootProject.arouterCompilerVersion"
     ]
 }

@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ylixiang.tool.R;
+import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@Route(path = ARouterUtils.TOOL_FRAGMENT_MAIN)
 public class MainToolFragment extends Fragment {
 
 
@@ -25,10 +28,6 @@ public class MainToolFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main_tool, container, false);
-    }
-
-    public static MainToolFragment newInstance() {
-        return new MainToolFragment();
     }
 
 }

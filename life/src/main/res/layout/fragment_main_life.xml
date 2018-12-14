@@ -6,8 +6,12 @@
     tools:context=".mvp.MainLifeFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <!--android:lineSpacingExtra="15dp"-->
+    <!--android:lineSpacingMultiplier="2"-->
     <TextView
+        android:id="@+id/m_open_btn"
         style="@style/main_index_text"
-        android:text="生活页" />
+        android:letterSpacing="0."
+        android:text="生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页生活页" />
 
 </FrameLayout>
