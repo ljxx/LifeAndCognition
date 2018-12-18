@@ -2,10 +2,10 @@ package com.ylixiang.life.mvp.presenter;
 
 import android.util.Log;
 
+import com.ylixiang.life.bean.GanHuoBean;
+import com.ylixiang.life.http.RetrofitFactory;
 import com.ylixiang.life.mvp.contact.TestContact;
 import com.ylixiang.ylxcommonlib.base.BasePresenterImpl;
-import com.ylixiang.ylxcommonlib.bean.GanHuoBean;
-import com.ylixiang.ylxcommonlib.http.RetrofitFactory;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;

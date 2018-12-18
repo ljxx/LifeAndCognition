@@ -1,6 +1,6 @@
-package com.ylixiang.ylxcommonlib.http;
+package com.ylixiang.life.http;
 
-import com.ylixiang.ylxcommonlib.bean.GanHuoBean;
+import com.ylixiang.life.bean.GanHuoBean;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

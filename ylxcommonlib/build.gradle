@@ -54,4 +54,7 @@ dependencies {
     api librarys.converterScalars
     api librarys.adapterRxjava
     api librarys.loggingInterceptor
+
+    api librarys.glide
+    annotationProcessor librarys.glideCompiler
 }

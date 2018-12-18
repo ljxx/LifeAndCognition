@@ -1,7 +1,4 @@
-package com.ylixiang.ylxcommonlib.base;
-
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
+package com.ylixiang.ylxcommonlib.utils;
 
 /**
  * ========================================
@@ -14,13 +11,11 @@ import com.bumptech.glide.module.AppGlideModule;
  * <p>
  * Q  Q：1099740455
  * <p>
- * 创建日期：2018/12/14  下午6:32
+ * 创建日期：2018/12/18  下午4:44
  * <p>
  * 描 述：
  * <p>
  * ========================================
  */
-@GlideModule
-public class MyAppGlideModule extends AppGlideModule {
-
+public class UiUtils {
 }

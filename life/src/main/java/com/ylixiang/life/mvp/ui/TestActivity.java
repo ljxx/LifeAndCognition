@@ -1,7 +1,7 @@
 package com.ylixiang.life.mvp.ui;
 
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ylixiang.life.R;
@@ -9,11 +9,14 @@ import com.ylixiang.life.mvp.contact.TestContact;
 import com.ylixiang.life.mvp.presenter.TestPresenter;
 import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
 import com.ylixiang.ylxcommonlib.base.BaseActivity;
+import com.ylixiang.ylxcommonlib.base.imageloader.ImageLoader;
+import com.ylixiang.ylxcommonlib.base.imageloader.glide.GlideImageLoaderConfig;
+import com.ylixiang.ylxcommonlib.base.imageloader.glide.GlideImageLoaderStrategy;
 
 @Route(path = ARouterUtils.LIFE_TEST_ACTIVITY)
 public class TestActivity extends BaseActivity<TestContact.Presenter> implements TestContact.View {
 
-    private TextView m_test_txt;
+    private ImageView m_test_txt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,9 @@ public class TestActivity extends BaseActivity<TestContact.Presenter> implements
 
     @Override
     public void setData(String str) {
-        m_test_txt.setText(str);
+//        GlideApp.with(TestActivity.this).load(str).into(m_test_txt);
+
+        ImageLoader imageLoader = new ImageLoader(new GlideImageLoaderStrategy());
+        imageLoader.loadImage(m_test_txt.getContext(), new GlideImageLoaderConfig.Builder().url(str).imageView(m_test_txt).build());
     }
 }

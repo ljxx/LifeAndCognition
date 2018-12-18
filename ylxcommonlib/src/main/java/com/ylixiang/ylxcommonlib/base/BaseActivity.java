@@ -38,7 +38,6 @@ public abstract class BaseActivity<P extends BasePressenter> extends AppCompatAc
         AppActivityManager.getInstance().addActivity(this);
 
         mPresenter = initPresenter();
-
     }
 
     @Override

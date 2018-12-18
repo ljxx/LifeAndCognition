@@ -14,9 +14,9 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ylixiang.life.R;
 import com.ylixiang.life.R2;
+import com.ylixiang.life.bean.GanHuoBean;
+import com.ylixiang.life.http.RetrofitFactory;
 import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
-import com.ylixiang.ylxcommonlib.bean.GanHuoBean;
-import com.ylixiang.ylxcommonlib.http.RetrofitFactory;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
