@@ -64,6 +64,7 @@ dependencies {
     api project(':ylxcommonlib')
 
     implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
@@ -71,9 +72,5 @@ dependencies {
     api librarys.butterknife
     annotationProcessor librarys.butterknifeCompiler
 
-    //解决冲突
-//    api(librarys.arouterApi) {
-//        exclude module: 'support-v4'
-//    }
     annotationProcessor librarys.arouterCompiler
 }
