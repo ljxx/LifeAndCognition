@@ -67,10 +67,6 @@ dependencies {
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
 
-    //解决冲突
-//    api(librarys.arouterApi) {
-//        exclude module: 'support-v4'
-//    }
     annotationProcessor librarys.arouterCompiler
 
 }

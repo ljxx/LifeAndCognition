@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.ylixiang.life.AppLifeAppcation"
-            android:value="IModuleConfig"/>
+            android:value="IModuleConfig" />
 
+        <activity android:name=".mvp.ui.TestActivity"></activity>
     </application>
 
 </manifest>

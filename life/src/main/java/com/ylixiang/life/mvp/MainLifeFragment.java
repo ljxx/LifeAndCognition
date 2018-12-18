@@ -15,7 +15,6 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.ylixiang.life.R;
 import com.ylixiang.life.R2;
 import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
-import com.ylixiang.ylxcommonlib.arouter.ConstantUtils;
 import com.ylixiang.ylxcommonlib.bean.GanHuoBean;
 import com.ylixiang.ylxcommonlib.http.RetrofitFactory;
 
@@ -54,7 +53,8 @@ public class MainLifeFragment extends Fragment {
         mOpenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build(ARouterUtils.MARK_MAIN_ACTIVITY).withString(ConstantUtils.MARKET_ACTIVITY_SEND_HELLO, "嘿嘿嘿，我来了。。。").navigation();
+//                ARouter.getInstance().build(ARouterUtils.MARK_MAIN_ACTIVITY).withString(ConstantUtils.MARKET_ACTIVITY_SEND_HELLO, "嘿嘿嘿，我来了。。。").navigation();
+                ARouter.getInstance().build(ARouterUtils.LIFE_TEST_ACTIVITY).navigation();
             }
         });
 

@@ -22,6 +22,8 @@ public class ARouterUtils {
     //获得Life模块Fragment
     public static final String LIFE_FRAGMENT_MAIN = "/life/main/MainLifeFragment";
 
+    public static final String LIFE_TEST_ACTIVITY = "/life/main/TestActivity";
+
     /*--------------------------------------------------------------------------------*/
 
     //获得Life模块Fragment

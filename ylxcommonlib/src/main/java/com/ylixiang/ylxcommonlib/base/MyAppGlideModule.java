@@ -1,7 +1,5 @@
 package com.ylixiang.ylxcommonlib;
 
-import android.support.v7.app.AppCompatActivity;
-
 /**
  * ========================================
  * <p>
@@ -13,11 +11,12 @@ import android.support.v7.app.AppCompatActivity;
  * <p>
  * Q  Q：1099740455
  * <p>
- * 创建日期：2018/12/7  下午3:14
+ * 创建日期：2018/12/14  下午6:32
  * <p>
  * 描 述：
  * <p>
  * ========================================
  */
-public class BaseActivity extends AppCompatActivity {
+public class MyAppGlideModule {
+
 }

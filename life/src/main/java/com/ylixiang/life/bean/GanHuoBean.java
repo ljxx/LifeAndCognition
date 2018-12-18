@@ -1,4 +1,4 @@
-package com.ylixiang.ylxcommonlib.bean;
+package com.ylixiang.life.bean;
 
 import java.util.List;
 
