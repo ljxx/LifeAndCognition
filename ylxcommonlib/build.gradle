@@ -23,6 +23,11 @@ android {
 
     }
 
+    //解决String.xml文件中的名称爆红的问题
+//    lintOptions{
+//        disable 'MissingTranslation'
+//    }
+
     buildTypes {
         release {
             minifyEnabled true

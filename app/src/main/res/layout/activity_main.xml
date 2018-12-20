@@ -16,7 +16,7 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/m_bottom_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/qb_px_50"
         android:background="@color/main_white_color"
         app:itemBackground="@null"
         app:labelVisibilityMode="labeled"
