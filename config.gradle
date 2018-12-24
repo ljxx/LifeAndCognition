@@ -21,7 +21,7 @@ ext {
             espressoVersion = "3.0.2",
 
             //第三方
-            butterknifeVersion = '9.0.0-rc2',
+            butterknifeVersion = '9.0.0-rc3',
             arouterApiVersion = '1.4.1',
             arouterCompilerVersion = '1.2.2',
 
@@ -32,7 +32,12 @@ ext {
 
             glideVersion = '4.8.0',
 
-            dagger2Version = '2.19'
+            dagger2Version = '2.19',
+
+            BaseRecyclerViewAdapterHelperVersion = '2.9.44',
+
+            jetpackPagingVersion = '1.0.0',
+            jetpackPagingRxjava2 = '1.0.0-rc1'
     ]
 
     dependencies = [
@@ -60,7 +65,13 @@ ext {
             glideCompiler       : "com.github.bumptech.glide:compiler:$rootProject.glideVersion",
 
             dagger2             : "com.google.dagger:dagger:$rootProject.dagger2Version",
-            daggerCompiler2     : "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+            daggerCompiler2     : "com.google.dagger:dagger-compiler:$rootProject.dagger2Version",
+
+            BaseRecyclerViewAdapterHelper : "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.BaseRecyclerViewAdapterHelperVersion",
+
+            jetpackPagingRuntime : "android.arch.paging:runtime:$rootProject.jetpackPagingVersion",
+            jetpackPagingCommon  : "android.arch.paging:common:$rootProject.jetpackPagingVersion",
+            jetpackPagingRxjava2 : "android.arch.paging:rxjava2:$rootProject.jetpackPagingRxjava2",
 
     ]
 }

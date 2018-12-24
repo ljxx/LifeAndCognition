@@ -1,0 +1,53 @@
+package com.ylixiang.market.mvp.fragment.adapter;
+
+import android.support.annotation.Nullable;
+import android.widget.ImageView;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import com.ylixiang.market.R;
+import com.ylixiang.market.bean.AndroidDataBean;
+import com.ylixiang.ylxcommonlib.base.imageloader.ImageLoader;
+import com.ylixiang.ylxcommonlib.base.imageloader.glide.GlideImageLoaderConfig;
+import com.ylixiang.ylxcommonlib.base.imageloader.glide.GlideImageLoaderStrategy;
+
+import java.util.List;
+
+/**
+ * ========================================
+ * <p>
+ * 版 权：仅供学习使用
+ * <p>
+ * 作 者：杨理想
+ * <p>
+ * 微 信：lanjixingxun
+ * <p>
+ * Q  Q：1099740455
+ * <p>
+ * 创建日期：2018/12/21  下午3:17
+ * <p>
+ * 描 述：
+ * <p>
+ * ========================================
+ */
+public class RecyclerLinerAdapter2 extends BaseQuickAdapter<AndroidDataBean, BaseViewHolder> {
+
+    public RecyclerLinerAdapter2(int layoutResId, @Nullable List<AndroidDataBean> data) {
+        super(layoutResId, data);
+    }
+
+    @Override
+    protected void convert(BaseViewHolder helper, AndroidDataBean item) {
+
+        ImageView mImageView = helper.getView(R.id.m_img_iv);
+
+        List<String> mImgs = item.getImages();
+        String mImgUrl = mImgs != null && mImgs.size() > 0 ? mImgs.get(0) : "";
+        ImageLoader imageLoader = new ImageLoader(new GlideImageLoaderStrategy());
+        imageLoader.loadImage(mImageView.getContext(), new GlideImageLoaderConfig.Builder().url(mImgUrl).imageView(mImageView).build());
+
+        String mTitle = item.getDesc();
+        helper.setText(R.id.m_title_txt, mTitle);
+
+    }
+}

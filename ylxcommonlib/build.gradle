@@ -65,4 +65,10 @@ dependencies {
 
     api librarys.dagger2
     annotationProcessor librarys.daggerCompiler2
+
+    api librarys.BaseRecyclerViewAdapterHelper
+
+    api librarys.jetpackPagingRuntime
+    annotationProcessor librarys.jetpackPagingCommon
+    api librarys.jetpackPagingRxjava2
 }

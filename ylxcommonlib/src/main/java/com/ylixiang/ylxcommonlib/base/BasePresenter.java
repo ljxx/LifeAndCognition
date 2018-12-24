@@ -19,7 +19,7 @@ import io.reactivex.disposables.Disposable;
  * <p>
  * ========================================
  */
-public interface BasePressenter {
+public interface BasePresenter {
 
     //默认初始化
     void start();

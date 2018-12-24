@@ -24,7 +24,7 @@ import com.ylixiang.ylxcommonlib.utils.AppActivityManager;
  * <p>
  * ========================================
  */
-public abstract class BaseActivity<P extends BasePressenter> extends AppCompatActivity implements BaseView {
+public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements BaseView {
 
     protected P mPresenter;
     public Context mContext;

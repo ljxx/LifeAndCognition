@@ -20,7 +20,7 @@ import io.reactivex.disposables.Disposable;
  * <p>
  * ========================================
  */
-public class BasePresenterImpl<V extends BaseView> implements BasePressenter {
+public class BasePresenterImpl<V extends BaseView> implements BasePresenter {
 
     private V mView; //给子类使用的View
 

@@ -4,6 +4,7 @@ if (isBuildModule) {
 } else {
     apply plugin: 'com.android.library'
 }
+apply plugin: 'com.jakewharton.butterknife'
 
 def config = rootProject.ext.android
 def librarys = rootProject.ext.dependencies
@@ -68,5 +69,9 @@ dependencies {
     androidTestImplementation librarys.espresso
 
     annotationProcessor librarys.arouterCompiler
+
+    //第三方库
+    api librarys.butterknife
+    annotationProcessor librarys.butterknifeCompiler
 
 }
