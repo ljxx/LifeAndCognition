@@ -28,4 +28,7 @@ public interface RetrofitService {
 
     @GET("api/data/Android/{pageSize}/{pageNum}")
     Observable<AndroidResponseBean> getAndroidData(@Path("pageSize") int pageSize, @Path("pageNum") int pageNum);
+
+    @GET("api/data/福利/{pageSize}/{pageNum}")
+    Observable<AndroidResponseBean> getGirlData(@Path("pageSize") int pageSize, @Path("pageNum") int pageNum);
 }

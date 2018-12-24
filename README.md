@@ -2,5 +2,6 @@
 init
 生活，集市，工具，娱乐，我的的模块
 
-1、将首页各个模块，fragment 分离组件化；
-2、BottomNavigationView 作为底部导航；
+目前框架搭建：组件化+MVP+RxJava2+Retrofit2+ARouter+BaseRecyclerViewAdapterHelper+Glide，
+一直在更新，后期会慢慢完善。
+

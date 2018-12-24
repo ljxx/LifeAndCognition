@@ -86,4 +86,43 @@ public class RecyclerViewPresenter extends BasePresenterImpl<RecyclerViewContact
                     });
         }
     }
+
+    @Override
+    public void getGrilData() {
+        if(isLoading) {
+            isLoading = false;
+            mView.showLoadingDialog("数据载入中。。。");
+            RetrofitFactory.getInstance()
+                    .getGirlData(mPageSize, mPageNum)
+                    .compose(RxHelper.<AndroidResponseBean>rxSchedulerHelper())
+                    .subscribe(new Consumer<AndroidResponseBean>() {
+                        @Override
+                        public void accept(AndroidResponseBean androidResponseBean) throws Exception {
+                            mView.dismissLoadingDialog();
+                            List<AndroidDataBean> mDataList = androidResponseBean.getResults();
+                            if(mDataList != null) {
+                                mView.setData(mDataList);
+                                if(mDataList.size() < 10) {
+                                    mView.setLoadEnable();
+                                    isLoading = false;
+                                } else {
+                                    isLoading = true;
+                                    mView.setLoadMoreComplete();
+                                }
+                                mPageNum ++;
+                            } else {
+                                //没有数据
+
+                                //判断是不是第一页
+                            }
+                        }
+                    }, new Consumer<Throwable>() {
+                        @Override
+                        public void accept(Throwable throwable) throws Exception {
+                            mView.dismissLoadingDialog();
+                            Log.i("====", "" + throwable.getMessage());
+                        }
+                    });
+        }
+    }
 }

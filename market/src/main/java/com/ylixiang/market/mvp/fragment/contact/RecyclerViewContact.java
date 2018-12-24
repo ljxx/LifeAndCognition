@@ -49,6 +49,11 @@ public interface RecyclerViewContact {
          */
         void getData();
 
+        /**
+         * 获取福利数据
+         */
+        void getGrilData();
+
         void setRefreshing();
     }
 }
