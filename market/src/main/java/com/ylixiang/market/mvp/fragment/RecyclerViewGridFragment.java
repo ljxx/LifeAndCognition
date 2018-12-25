@@ -2,13 +2,10 @@ package com.ylixiang.market.mvp.fragment;
 
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.ylixiang.market.R;
@@ -26,8 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,7 +33,6 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
     YRecyclerView mRecyclerView;
     @BindView(R2.id.m_swipe_refresh_layout)
     YSwipeRefreshLayout mSwipeRefreshLayout;
-    Unbinder unbinder;
 
     private GridLayoutManager mGridLayoutManager;
     private RecyclerLinerAdapter mAdater;
@@ -49,13 +43,13 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_recycler_view_liner, container, false);
-        unbinder = ButterKnife.bind(this, view);
+    protected int setContentView() {
+        return R.layout.fragment_recycler_view_liner;
+    }
 
-        //设置刷新样式
+    @Override
+    protected void initView() {
+//设置刷新样式
         mSwipeRefreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN);
 
         mDataList = new ArrayList<>();
@@ -82,19 +76,6 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
             }
         });
 
-        /**
-         * 初始化自动加载的时候显示加载
-         */
-        mRecyclerView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //这个方法是让一进入页面的时候实现网络请求，有个缓冲的效果
-                mSwipeRefreshLayout.setRefreshing(true);
-                //模拟一下网络请求
-                mPresenter.getGrilData();
-            }
-        }, 1000);
-
 //        默认第一次加载会回调onLoadMoreRequested()加载更多这个方法，如果不需要可以配置如下：
 //        mAdater.disableLoadMoreIfNotFullPage();
 //        加载完成（注意不是加载结束，而是本次数据加载结束并且还有下页数据）
@@ -114,8 +95,23 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
 
             }
         }, mRecyclerView);
+    }
 
-        return view;
+    @Override
+    protected void lazyLoad() {
+        Log.i("=======","****RecyclerViewGridFragment*****");
+        /**
+         * 初始化自动加载的时候显示加载
+         */
+        mRecyclerView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //这个方法是让一进入页面的时候实现网络请求，有个缓冲的效果
+                mSwipeRefreshLayout.setRefreshing(true);
+                //模拟一下网络请求
+                mPresenter.getGrilData();
+            }
+        }, 1000);
     }
 
     @Override
@@ -142,11 +138,5 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
     @Override
     public void setLoadMoreComplete() {
         mAdater.loadMoreComplete();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
     }
 }
