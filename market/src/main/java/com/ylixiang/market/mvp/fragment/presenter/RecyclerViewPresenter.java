@@ -101,6 +101,7 @@ public class RecyclerViewPresenter extends BasePresenterImpl<RecyclerViewContact
                             mView.dismissLoadingDialog();
                             List<AndroidDataBean> mDataList = androidResponseBean.getResults();
                             if(mDataList != null) {
+                                mPageNum ++;
                                 mView.setData(mDataList);
                                 if(mDataList.size() < 10) {
                                     mView.setLoadEnable();
@@ -109,7 +110,6 @@ public class RecyclerViewPresenter extends BasePresenterImpl<RecyclerViewContact
                                     isLoading = true;
                                     mView.setLoadMoreComplete();
                                 }
-                                mPageNum ++;
                             } else {
                                 //没有数据
 

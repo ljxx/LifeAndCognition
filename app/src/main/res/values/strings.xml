@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LifeAndCognition</string>
+    <string name="app_name">生活工具</string>
 
     <string name="m_main_tab_life_txt">生活</string>
     <string name="m_main_tab_market_txt">集市</string>

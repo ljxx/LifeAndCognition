@@ -1,6 +1,8 @@
 package com.ylixiang.market.mvp.fragment.adapter;
 
+import android.app.Activity;
 import android.support.annotation.Nullable;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -9,6 +11,7 @@ import com.ylixiang.market.R;
 import com.ylixiang.market.bean.AndroidDataBean;
 import com.ylixiang.ylxcommonlib.base.GlideApp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,14 +33,34 @@ import java.util.List;
  */
 public class RecyclerLinerAdapter extends BaseQuickAdapter<AndroidDataBean, BaseViewHolder> {
 
+    private List<Integer> mHeights;
+
     public RecyclerLinerAdapter(int layoutResId, @Nullable List<AndroidDataBean> data) {
         super(layoutResId, data);
+        mHeights = new ArrayList<>();
     }
 
     @Override
     protected void convert(BaseViewHolder helper, AndroidDataBean item) {
 
         ImageView mImageView = helper.getView(R.id.m_img_iv);
+
+        /**************为瀑布流设置高度****且，防止刷新后瀑布流变更位置，这里将第一次加载的位置记录下来，复用*********/
+        int width = ((Activity) mImageView.getContext()).getWindowManager().getDefaultDisplay().getWidth();
+        ViewGroup.LayoutParams params = mImageView.getLayoutParams();
+        //设置图片的相对于屏幕的宽高比
+        params.width = width/3;
+        if(mHeights.size() <= helper.getLayoutPosition()) {
+            int mHeight = (int) (200 + Math.random() * 400);
+            mHeights.add(mHeight);
+        } else {
+        }
+//        params.height = mHeight;
+        params.height = mHeights.get(helper.getAdapterPosition());
+        mImageView.setLayoutParams(params);
+
+        /**************为瀑布流设置高度****结束*********/
+
 
         String mUrl = item.getUrl();
         mUrl = mUrl != null ? mUrl : "";

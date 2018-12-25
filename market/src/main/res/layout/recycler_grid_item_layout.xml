@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/m_img_iv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/qb_px_100"
+        android:scaleType="fitCenter"
         android:src="@drawable/ic_launcher_background"/>
 
     <TextView

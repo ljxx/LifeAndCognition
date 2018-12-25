@@ -18,6 +18,7 @@ import com.ylixiang.market.mvp.fragment.adapter.RecyclerLinerAdapter;
 import com.ylixiang.market.mvp.fragment.contact.RecyclerViewContact;
 import com.ylixiang.market.mvp.fragment.presenter.RecyclerViewPresenter;
 import com.ylixiang.ylxcommonlib.base.BaseFragment;
+import com.ylixiang.ylxcommonlib.utils.SpacesItemDecoration;
 import com.ylixiang.ylxcommonlib.view.YRecyclerView;
 import com.ylixiang.ylxcommonlib.view.YSwipeRefreshLayout;
 
@@ -62,6 +63,8 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
 
         mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
+        int mSpacingInPixels = getResources().getDimensionPixelSize(R.dimen.qb_px_3);
+        mRecyclerView.addItemDecoration(new SpacesItemDecoration(mSpacingInPixels));
         mRecyclerView.setAdapter(mAdater);
 
         /**
@@ -101,7 +104,7 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
 //        加载结束
 //        mAdater.loadMoreEnd();
 
-        mAdater.setAutoLoadMoreSize(5);
+//        mAdater.setAutoLoadMoreSize(5);
 
         mAdater.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
             @Override
@@ -125,8 +128,6 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
         mSwipeRefreshLayout.setRefreshing(false);
         if(mAdater == null) {
             mAdater = new RecyclerLinerAdapter(R.layout.recycler_grid_item_layout, mDataList);
-            mGridLayoutManager = new GridLayoutManager(getActivity(), 2);
-            mRecyclerView.setLayoutManager(mGridLayoutManager);
             mRecyclerView.setAdapter(mAdater);
         } else {
             mAdater.addData(list);
