@@ -1,4 +1,4 @@
-package com.ylixiang.ylxcommonlib.utils;
+package com.ylixiang.ylxcommonlib.utils.decoration;
 
 import android.graphics.Rect;
 import android.support.annotation.NonNull;

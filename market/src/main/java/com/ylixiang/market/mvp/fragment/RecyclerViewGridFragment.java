@@ -15,7 +15,7 @@ import com.ylixiang.market.mvp.fragment.adapter.RecyclerLinerAdapter;
 import com.ylixiang.market.mvp.fragment.contact.RecyclerViewContact;
 import com.ylixiang.market.mvp.fragment.presenter.RecyclerViewPresenter;
 import com.ylixiang.ylxcommonlib.base.BaseFragment;
-import com.ylixiang.ylxcommonlib.utils.SpacesItemDecoration;
+import com.ylixiang.ylxcommonlib.utils.decoration.SpacesItemDecoration;
 import com.ylixiang.ylxcommonlib.view.YRecyclerView;
 import com.ylixiang.ylxcommonlib.view.YSwipeRefreshLayout;
 

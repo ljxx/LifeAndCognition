@@ -3,6 +3,7 @@ package com.ylixiang.market.mvp.fragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 
@@ -74,6 +75,8 @@ public class RecyclerViewLinerFragment extends BaseFragment<RecyclerViewContact.
         mAdater = new RecyclerLinerAdapter(R.layout.recycler_liner_item_layout, mDataList);
         mLinearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
+        int mSpacingInPixels = getResources().getDimensionPixelSize(R.dimen.qb_px_1);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         mRecyclerView.setAdapter(mAdater);
 
         mAdater.setAutoLoadMoreSize(5);
