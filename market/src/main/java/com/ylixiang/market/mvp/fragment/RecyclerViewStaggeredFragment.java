@@ -59,6 +59,7 @@ public class RecyclerViewStaggeredFragment extends BaseFragment<RecyclerViewCont
 
         mDataList = new ArrayList<>();
         mAdater = new RecyclerLinerAdapter(R.layout.recycler_grid_item_layout, mDataList);
+        mAdater.setType(2);
 
         mStaggeredGridLayoutManager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mStaggeredGridLayoutManager);

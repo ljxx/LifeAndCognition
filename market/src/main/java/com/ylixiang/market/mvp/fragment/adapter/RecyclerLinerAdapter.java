@@ -35,9 +35,15 @@ public class RecyclerLinerAdapter extends BaseQuickAdapter<AndroidDataBean, Base
 
     private List<Integer> mHeights;
 
+    private int mType = 0;
+
     public RecyclerLinerAdapter(int layoutResId, @Nullable List<AndroidDataBean> data) {
         super(layoutResId, data);
         mHeights = new ArrayList<>();
+    }
+
+    public void setType(int type) {
+        this.mType = type;
     }
 
     @Override
@@ -45,21 +51,28 @@ public class RecyclerLinerAdapter extends BaseQuickAdapter<AndroidDataBean, Base
 
         ImageView mImageView = helper.getView(R.id.m_img_iv);
 
-        /**************为瀑布流设置高度****且，防止刷新后瀑布流变更位置，这里将第一次加载的位置记录下来，复用*********/
-        int width = ((Activity) mImageView.getContext()).getWindowManager().getDefaultDisplay().getWidth();
-        ViewGroup.LayoutParams params = mImageView.getLayoutParams();
-        //设置图片的相对于屏幕的宽高比
-        params.width = width/3;
-        if(mHeights.size() <= helper.getLayoutPosition()) {
-            int mHeight = (int) (200 + Math.random() * 400);
-            mHeights.add(mHeight);
-        } else {
-        }
+        switch (mType) {
+            case 0:
+            case 1:
+                break;
+            case 2:
+                /**************为瀑布流设置高度****且，防止刷新后瀑布流变更位置，这里将第一次加载的位置记录下来，复用*********/
+                int width = ((Activity) mImageView.getContext()).getWindowManager().getDefaultDisplay().getWidth();
+                ViewGroup.LayoutParams params = mImageView.getLayoutParams();
+                //设置图片的相对于屏幕的宽高比
+                params.width = width/3;
+                if(mHeights.size() <= helper.getLayoutPosition()) {
+                    int mHeight = (int) (200 + Math.random() * 400);
+                    mHeights.add(mHeight);
+                } else {
+                }
 //        params.height = mHeight;
-        params.height = mHeights.get(helper.getAdapterPosition());
-        mImageView.setLayoutParams(params);
+                params.height = mHeights.get(helper.getAdapterPosition());
+                mImageView.setLayoutParams(params);
 
-        /**************为瀑布流设置高度****结束*********/
+                /**************为瀑布流设置高度****结束*********/
+                break;
+        }
 
 
         String mUrl = item.getUrl();
