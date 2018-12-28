@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".mvp.fragment.RecyclerViewLinerFragment">
 
-    <com.ylixiang.ylxcommonlib.view.SuperSwipeRefreshLayout
+    <com.ylixiang.ylxcommonlib.view.YSwipeRefreshLayout
         android:id="@+id/m_swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,6 +13,6 @@
             android:id="@+id/m_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </com.ylixiang.ylxcommonlib.view.SuperSwipeRefreshLayout>
+    </com.ylixiang.ylxcommonlib.view.YSwipeRefreshLayout>
 
 </FrameLayout>

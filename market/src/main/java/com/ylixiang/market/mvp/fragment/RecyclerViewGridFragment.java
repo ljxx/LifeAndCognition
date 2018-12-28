@@ -44,7 +44,7 @@ public class RecyclerViewGridFragment extends BaseFragment<RecyclerViewContact.P
 
     @Override
     protected int setContentView() {
-        return R.layout.fragment_recycler_view_liner;
+        return R.layout.fragment_recycler_view;
     }
 
     @Override
