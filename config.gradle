@@ -1,5 +1,5 @@
 ext {
-    isBuildModule = false    //是否构建单独的业务app；true 独立；false 不独立；
+    isBuildModule = true    //是否构建单独的业务app；true 独立；false 不独立；
 
     android = [
             compileSdkVersion   : 28,
