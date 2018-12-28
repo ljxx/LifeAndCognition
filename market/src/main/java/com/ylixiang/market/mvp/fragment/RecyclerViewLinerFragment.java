@@ -1,6 +1,7 @@
 package com.ylixiang.market.mvp.fragment;
 
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
@@ -71,6 +72,9 @@ public class RecyclerViewLinerFragment extends BaseFragment<RecyclerViewContact.
 //        mAdater.loadMoreFail();
 //        加载结束
 //        mAdater.loadMoreEnd();
+
+        //设置刷新样式
+        mSwipeRefreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN);
 
         mAdater = new RecyclerLinerAdapter(R.layout.recycler_liner_item_layout, mDataList);
         mLinearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);

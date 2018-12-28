@@ -54,7 +54,7 @@ public class RecyclerViewStaggeredFragment extends BaseFragment<RecyclerViewCont
 
     @Override
     protected void initView() {
-//设置刷新样式
+        //设置刷新样式
         mSwipeRefreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN);
 
         mDataList = new ArrayList<>();
