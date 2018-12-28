@@ -2,10 +2,11 @@ package com.ylixiang.ylxcommonlib.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.ylixiang.ylxcommonlib.utils.AppActivityManager;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * ========================================

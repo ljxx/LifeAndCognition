@@ -1,11 +1,12 @@
 package com.ylixiang.market;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ylixiang.ylxcommonlib.arouter.ConstantUtils;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * ========================================

@@ -13,7 +13,7 @@ android {
         versionCode config.versionCode
         versionName config.versionName
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -39,18 +39,21 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api librarys.appcompatV7
+    api librarys.appcompatV4
     api librarys.constraint
     api librarys.design
-    testImplementation librarys.junit
+//    testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
     //第三方库
     api librarys.butterknife
     annotationProcessor librarys.butterknifeCompiler
-    //解决冲突
-    api(librarys.arouterApi) {
-        exclude module: 'support-v4'
-    }
+
+    api librarys.arouterApi
+//    //解决冲突
+//    api(librarys.arouterApi) {
+//        exclude module: 'support-v4'
+//    }
     annotationProcessor librarys.arouterCompiler
     api librarys.rxjava2
     api librarys.rxandroid2

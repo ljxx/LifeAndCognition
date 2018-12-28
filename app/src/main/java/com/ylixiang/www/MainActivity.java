@@ -1,19 +1,21 @@
 package com.ylixiang.www;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ylixiang.www.bottomtab.ViewPagerAdapter;
 import com.ylixiang.www.utils.FragmentUtils;
+import com.ylixiang.ylxcommonlib.view.YBottomNavigationView;
+import com.ylixiang.ylxcommonlib.view.YViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,9 +39,9 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.m_main_view_pager)
-    ViewPager mMainViewPager;
+    YViewPager mMainViewPager;
     @BindView(R.id.m_bottom_navigation_view)
-    BottomNavigationView mBottomNavigationView;
+    YBottomNavigationView mBottomNavigationView;
 
     private MenuItem mMenuItem;
     private final int M_TAB_LIFE = 0;

@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * ========================================
@@ -18,18 +18,18 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
  * <p>
  * Q  Q：1099740455
  * <p>
- * 创建日期：2018/12/21  下午2:55
+ * 创建日期：2018/12/28  下午2:53
  * <p>
  * 描 述：
  * <p>
  * ========================================
  */
-public class YSwipeRefreshLayout extends SwipeRefreshLayout {
-    public YSwipeRefreshLayout(@NonNull Context context) {
+public class YViewPager extends ViewPager {
+    public YViewPager(@NonNull Context context) {
         super(context);
     }
 
-    public YSwipeRefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public YViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 }

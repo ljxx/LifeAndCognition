@@ -2,9 +2,6 @@ package com.ylixiang.market.mvp.fragment;
 
 
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -22,6 +19,9 @@ import com.ylixiang.ylxcommonlib.view.YSwipeRefreshLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import butterknife.BindView;
 
 /**

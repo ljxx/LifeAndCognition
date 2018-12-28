@@ -3,9 +3,6 @@ package com.ylixiang.market.mvp;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +15,13 @@ import com.ylixiang.market.mvp.fragment.RecyclerViewLinerFragment;
 import com.ylixiang.market.mvp.fragment.RecyclerViewStaggeredFragment;
 import com.ylixiang.ylxcommonlib.adapter.MyFragmentPagerAdapter;
 import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
+import com.ylixiang.ylxcommonlib.view.YTabLayout;
+import com.ylixiang.ylxcommonlib.view.YViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.fragment.app.Fragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -33,9 +33,9 @@ import butterknife.Unbinder;
 public class MainMarketFragment extends Fragment {
 
     @BindView(R2.id.m_tab_layout)
-    TabLayout mTabLayout;
+    YTabLayout mTabLayout;
     @BindView(R2.id.m_view_pager)
-    ViewPager mViewPager;
+    YViewPager mViewPager;
     Unbinder unbinder;
     private MyFragmentPagerAdapter mMyFragmentPagerAdapter;
 

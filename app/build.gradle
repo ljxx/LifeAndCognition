@@ -14,7 +14,7 @@ android {
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -40,7 +40,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //公共插件
     api project(':ylxcommonlib')
-    testImplementation librarys.junit
+//    testImplementation librarys.junit
     androidTestImplementation librarys.runner
     androidTestImplementation librarys.espresso
 

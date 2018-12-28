@@ -2,7 +2,6 @@ package com.ylixiang.life.mvp;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +17,7 @@ import com.ylixiang.life.bean.GanHuoBean;
 import com.ylixiang.life.http.RetrofitFactory;
 import com.ylixiang.ylxcommonlib.arouter.ARouterUtils;
 
+import androidx.fragment.app.Fragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

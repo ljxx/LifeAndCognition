@@ -14,11 +14,12 @@ ext {
     ]
 
     libsVersion = [
-            supportLibraryVersion = "28.0.0",
-            constraintVersion = "1.1.3",
+            appcompatVersion = "1.0.0",
+            constraintVersion = "1.1.2",
             junitVersion = "4.12",
-            runnerVersion = "1.0.2",
-            espressoVersion = "3.0.2",
+            runnerVersion = "1.1.0",
+            espressoVersion = "3.1.0",
+            designVersion = "1.0.0-rc01",
 
             //第三方
             butterknifeVersion = '9.0.0-rc3',
@@ -36,17 +37,17 @@ ext {
 
             BaseRecyclerViewAdapterHelperVersion = '2.9.44',
 
-            jetpackPagingVersion = '1.0.0',
-            jetpackPagingRxjava2 = '1.0.0-rc1'
+            jetpackPagingVersion = '2.0.0-rc01',
     ]
 
     dependencies = [
-            appcompatV7         : "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
-            constraint          : "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion",
-            design              : "com.android.support:design:$rootProject.supportLibraryVersion",
+            appcompatV7         : "androidx.appcompat:appcompat:$rootProject.appcompatVersion",
+            appcompatV4         : "androidx.legacy:legacy-support-v4:$rootProject.appcompatVersion",
+            constraint          : "androidx.constraintlayout:constraintlayout:$rootProject.constraintVersion",
+            design              : "com.google.android.material:material:$rootProject.designVersion",
             junit               : "junit:junit:$rootProject.junitVersion",
-            runner              : "com.android.support.test:runner:$rootProject.runnerVersion",
-            espresso            : "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion",
+            runner              : "androidx.test:runner:$rootProject.runnerVersion",
+            espresso            : "androidx.test.espresso:espresso-core:$rootProject.espressoVersion",
 
             butterknife         : "com.jakewharton:butterknife:$rootProject.butterknifeVersion",
             butterknifeCompiler : "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion",
@@ -69,9 +70,9 @@ ext {
 
             BaseRecyclerViewAdapterHelper : "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.BaseRecyclerViewAdapterHelperVersion",
 
-            jetpackPagingRuntime : "android.arch.paging:runtime:$rootProject.jetpackPagingVersion",
-            jetpackPagingCommon  : "android.arch.paging:common:$rootProject.jetpackPagingVersion",
-            jetpackPagingRxjava2 : "android.arch.paging:rxjava2:$rootProject.jetpackPagingRxjava2",
+            jetpackPagingRuntime : "androidx.paging:paging-runtime:$rootProject.jetpackPagingVersion",
+            jetpackPagingCommon  : "androidx.paging:paging-common:$rootProject.jetpackPagingVersion",
+            jetpackPagingRxjava2 : "androidx.paging:paging-common:$rootProject.jetpackPagingVersion",
 
     ]
 }

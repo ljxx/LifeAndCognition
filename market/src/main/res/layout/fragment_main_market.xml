@@ -8,7 +8,7 @@
     tools:context=".mvp.MainMarketFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.design.widget.TabLayout
+    <com.ylixiang.ylxcommonlib.view.YTabLayout
         android:id="@+id/m_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/qb_px_40"
@@ -20,7 +20,7 @@
         android:layout_height="@dimen/qb_px_1"
         android:background="#eeeeee"/>
 
-    <android.support.v4.view.ViewPager
+    <com.ylixiang.ylxcommonlib.view.YViewPager
         android:id="@+id/m_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

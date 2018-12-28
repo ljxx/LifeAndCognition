@@ -3,9 +3,7 @@ package com.ylixiang.ylxcommonlib.view;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import com.google.android.material.tabs.TabLayout;
 
 /**
  * ========================================
@@ -18,18 +16,22 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
  * <p>
  * Q  Q：1099740455
  * <p>
- * 创建日期：2018/12/21  下午2:55
+ * 创建日期：2018/12/28  下午3:23
  * <p>
  * 描 述：
  * <p>
  * ========================================
  */
-public class YSwipeRefreshLayout extends SwipeRefreshLayout {
-    public YSwipeRefreshLayout(@NonNull Context context) {
+public class YTabLayout extends TabLayout {
+    public YTabLayout(Context context) {
         super(context);
     }
 
-    public YSwipeRefreshLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public YTabLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    public YTabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
     }
 }

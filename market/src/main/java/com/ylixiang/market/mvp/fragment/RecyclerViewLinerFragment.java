@@ -2,9 +2,6 @@ package com.ylixiang.market.mvp.fragment;
 
 
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,10 +22,26 @@ import com.ylixiang.ylxcommonlib.view.YRecyclerView;
 
 import java.util.List;
 
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import butterknife.BindView;
 
 /**
- * A simple {@link Fragment} subclass.
+ * ========================================
+ *
+ * 版 权：仅供学习使用
+ *
+ * 作 者：杨理想
+ *
+ * 微 信：lanjixingxun
+ *
+ * Q  Q：1099740455
+ *
+ * 创建日期：2018/12/28 下午3:00
+ *
+ * 描 述：
+ *
+ * ========================================
  */
 public class RecyclerViewLinerFragment extends BaseFragment<RecyclerViewContact.Presenter> implements RecyclerViewContact.View {
 
@@ -192,10 +205,10 @@ public class RecyclerViewLinerFragment extends BaseFragment<RecyclerViewContact.
     private View createHeaderView() {
         View headerView = LayoutInflater.from(mSwipeRefreshLayout.getContext())
                 .inflate(R.layout.layout_head, null);
-        progressBar = (ProgressBar) headerView.findViewById(R.id.pb_view);
-        textView = (TextView) headerView.findViewById(R.id.text_view);
+        progressBar = headerView.findViewById(R.id.pb_view);
+        textView = headerView.findViewById(R.id.text_view);
         textView.setText("下拉刷新");
-        imageView = (ImageView) headerView.findViewById(R.id.image_view);
+        imageView = headerView.findViewById(R.id.image_view);
         imageView.setVisibility(View.VISIBLE);
         imageView.setImageResource(R.drawable.down_arrow);
         progressBar.setVisibility(View.GONE);
