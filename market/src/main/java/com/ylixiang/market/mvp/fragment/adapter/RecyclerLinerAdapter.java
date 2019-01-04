@@ -79,10 +79,10 @@ public class RecyclerLinerAdapter extends BaseQuickAdapter<AndroidDataBean, Base
         mUrl = mUrl != null ? mUrl : "";
 
         List<String> mImgs = item.getImages();
-        String mImgUrl = mImgs != null && mImgs.size() > 0 ? mImgs.get(0) : mUrl;
+//        String mImgUrl = mImgs != null && mImgs.size() > 0 ? mImgs.get(0) : mUrl;
 //        ImageLoader imageLoader = new ImageLoader(new GlideImageLoaderStrategy());
 //        imageLoader.loadImage(mImageView.getContext(), new GlideImageLoaderConfig.Builder().url(mImgUrl).imageView(mImageView).build());
-        GlideApp.with(mImageView.getContext()).load(mImgUrl).into(mImageView);
+//        GlideApp.with(mImageView.getContext()).load(mImgUrl).into(mImageView);
 
         String mTitle = item.getDesc();
         helper.setText(R.id.m_title_txt, mTitle);
